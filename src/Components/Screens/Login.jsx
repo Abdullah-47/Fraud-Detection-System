@@ -43,7 +43,7 @@ export default function Login() {
 
           <div className="flex justify-center items-center">
             <p className="text-sm text-gray-700 mx-1">Don't have an account?</p>
-            <a href="#" className="hover:opacity-90">Sign up</a>
+            <a href="/signup" className="hover:opacity-90">Sign up</a>
           </div>
         </div>
       </div>
