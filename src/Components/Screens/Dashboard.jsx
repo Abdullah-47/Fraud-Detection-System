@@ -62,7 +62,7 @@ export default function Dashboard() {
 
   const handleChange = ({ currentTarget: input }) => {
     const value = parseFloat(input.value);
-  
+
     setData({ ...data, [input.name]: value });
   };
 
@@ -77,20 +77,20 @@ export default function Dashboard() {
       const wsname = wb.SheetNames[0];
       const ws = wb.Sheets[wsname];
       const data = XLSX.utils.sheet_to_json(ws, { header: 1 });
-      
+
       // Assuming the Excel file has headers and the data starts from the second row
       const [headers, ...rowData] = data;
       const newData = {};
       headers.forEach((header, index) => {
         newData[header.toLowerCase()] = rowData[0][index];
       });
-      
+
       setData(newData);
     };
 
     reader.readAsBinaryString(file);
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -175,7 +175,7 @@ export default function Dashboard() {
 
         {/* main  */}
 
-        <main className="h-screen w-full lg:w-[80%] px-8 py-10 shadow-gray-100 shadow-md">
+        <main className="h-screen w-full lg:w-[80%] px-8 py-10 shadow-gray-100 shadow-md scroll-auto">
           <div className="h-[10%]">
             <Navbar />
           </div>
@@ -264,7 +264,7 @@ export default function Dashboard() {
                     placeholder="v5"
                     name="v5"
                     onChange={handleChange}
-                  
+
                     required
                   />
                 </div>
@@ -277,7 +277,7 @@ export default function Dashboard() {
                     placeholder="v6"
                     name="v6"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -314,7 +314,7 @@ export default function Dashboard() {
                     placeholder="V9"
                     name="v9"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -328,7 +328,7 @@ export default function Dashboard() {
                     placeholder="V10"
                     name="v10"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -341,7 +341,7 @@ export default function Dashboard() {
                     placeholder="V11"
                     name="v11"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -367,7 +367,7 @@ export default function Dashboard() {
                     placeholder="V13"
                     name="v13"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -380,7 +380,7 @@ export default function Dashboard() {
                     placeholder="V14"
                     name="v14"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -393,7 +393,7 @@ export default function Dashboard() {
                     placeholder="V15"
                     name="v15"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -406,7 +406,7 @@ export default function Dashboard() {
                     placeholder="V16"
                     name="v16"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -419,7 +419,7 @@ export default function Dashboard() {
                     placeholder="V17"
                     name="v17"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -432,7 +432,7 @@ export default function Dashboard() {
                     placeholder="V18"
                     name="v18"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -445,7 +445,7 @@ export default function Dashboard() {
                     placeholder="V19"
                     name="v19"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -458,7 +458,7 @@ export default function Dashboard() {
                     placeholder="V20"
                     name="v20"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -471,7 +471,7 @@ export default function Dashboard() {
                     placeholder="V21"
                     name="v21"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -484,7 +484,7 @@ export default function Dashboard() {
                     placeholder="V22"
                     name="v22"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -497,7 +497,7 @@ export default function Dashboard() {
                     placeholder="V23"
                     name="v23"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -510,7 +510,7 @@ export default function Dashboard() {
                     placeholder="V24"
                     name="v24"
                     onChange={handleChange}
-                  
+
                     required
                   />
                 </div>
@@ -523,7 +523,7 @@ export default function Dashboard() {
                     placeholder="V25"
                     name="v25"
                     onChange={handleChange}
-                    
+
                     required
                   />
                 </div>
@@ -536,7 +536,7 @@ export default function Dashboard() {
                     placeholder="V26"
                     name="v26"
                     onChange={handleChange}
-                  
+
                     required
                   />
                 </div>
@@ -561,7 +561,7 @@ export default function Dashboard() {
                     placeholder="V28"
                     name="v28"
                     onChange={handleChange}
-                  
+
                     required
                   />
                 </div>
