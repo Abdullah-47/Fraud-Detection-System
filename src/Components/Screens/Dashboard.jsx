@@ -565,9 +565,9 @@ export default function Dashboard() {
 
               <div>
 
-                <h2 className="text-2xl text-center my-8 font-semibold font-Onest">Or</h2>
+                <h2 className="text-2xl text-center my-8 font-semibold font-Onest">OR</h2>
                 <input
-                  className=" bg-blue-800"
+                  className=" bg-[#209CEE] text-black w-96"
                   type="file"
                   onChange={handleFileUpload}
                 />
@@ -576,13 +576,13 @@ export default function Dashboard() {
               {/* END */}
 
               {error && (
-                <div className="text-red-500 text-center my-2">{error}</div>
+                <div className="text-red-500 text-center my-2 font-semibold">{error}</div>
               )}
 
               <button
                 onClick={handleSubmit}
                 type="submit"
-                className="w-full flex justify-center items-center mt-4 text-center p-5 text-lg font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="w-full flex justify-center items-center mt-4 text-center p-5 text-lg font-medium text-white bg-[#209CEE] rounded-lg border  hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Search
                 <svg
@@ -604,13 +604,13 @@ export default function Dashboard() {
               </button>
 
               {predition !== null && (
-                <div className="text-center my-2 font-Onest">
+                <div className="text-center my-10 text-lg font-Onest">
                   {predition === 0 ? (
                     <div className="text-green-500 ">
                       This is a proper transaction.
                     </div>
                   ) : (
-                    <div className="text-red-500 ">
+                    <div className="text-red-600 ">
                       This is a fraudulent transaction.
                     </div>
                   )}
