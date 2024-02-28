@@ -106,27 +106,34 @@ export default function Dashboard() {
                   <h2 className="text-lg text-gray-700 font-semibold">Home</h2>
                 </div>
               </Link>
+              <Link to="/dashboard">
               <div className="flex w-full justify-start items-center space-x-6">
                 <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
                 <h2 className="text-lg text-gray-700 font-semibold">
                   Dashboard
                 </h2>
               </div>
+              </Link>
+              <Link to="/dashboard">
               <div className="flex w-full justify-start items-center space-x-6">
                 <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
                 <h2 className="text-lg text-gray-700 font-semibold">
                   Analytics
                 </h2>
               </div>
+              </Link>
+
+              <Link to="/dashboard">
               <div className="flex w-full justify-start items-center space-x-6">
                 <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
                 <h2 className="text-lg text-gray-700 font-semibold">History</h2>
               </div>
+              </Link>
             </div>
           </div>
 
           {/* bottom */}
-          <div className="w-full flex justify-center items-center space-x-6 py-8">
+          <div className="w-full flex justify-center items-center space-x-6 py-8 cursor-pointer">
             <img
               className="h-12 w-12 rounded-full"
               src="/headshot.jpeg"
