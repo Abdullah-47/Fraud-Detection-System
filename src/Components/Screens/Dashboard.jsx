@@ -578,6 +578,10 @@ export default function Dashboard() {
                   />
                 </div>
               </div>
+              
+              <div>
+        <input type="file" onChange={handleFileUpload} />
+      </div>
 
               {/* END */}
 
@@ -609,9 +613,7 @@ export default function Dashboard() {
                 </svg>
                 <span className="sr-only">Search</span>
               </button>
-              <div>
-        <input type="file" onChange={handleFileUpload} />
-      </div>
+
               {predition !== null && (
         <div className="text-center my-2">
           {predition === 0 ? (
