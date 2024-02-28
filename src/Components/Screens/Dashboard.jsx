@@ -133,7 +133,7 @@ export default function Dashboard() {
             <div className="flex flex-col space-y-10 w-full pl-10">
               <Link to="/">
                 <div className="flex w-full justify-start items-center space-x-6">
-                  <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
+                  <img className="h-5 opacity-60" src="/home.png" alt="" />
                   <h2 className="text-lg text-gray-700 font-semibold">Home</h2>
                 </div>
               </Link>
@@ -147,7 +147,7 @@ export default function Dashboard() {
               </Link>
               <Link to="/dashboard">
                 <div className="flex w-full justify-start items-center space-x-6">
-                  <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
+                  <img className="h-5 opacity-60" src="/chart.png" alt="" />
                   <h2 className="text-lg text-gray-700 font-semibold">
                     Analytics
                   </h2>
@@ -156,7 +156,7 @@ export default function Dashboard() {
 
               <Link to="/history">
                 <div className="flex w-full justify-start items-center space-x-6">
-                  <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
+                  <img className="h-5 opacity-60" src="/history.png" alt="" />
                   <h2 className="text-lg text-gray-700 font-semibold">
                     History
                   </h2>
