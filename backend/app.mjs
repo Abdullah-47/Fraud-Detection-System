@@ -32,8 +32,6 @@ app.post('/login', (req, res) => {
  app.post('/predict', async (req, res) => {
   try {
    const data = req.body;
-console.log(data)
-
       const response = await axios.post('http://127.0.0.1:8000/predict', data);
       res.json(response.data);
   } catch (error) {

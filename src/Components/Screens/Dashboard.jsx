@@ -26,6 +26,7 @@ export default function Dashboard() {
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
   };
+  const[predition,setPredition] = useState(null);
 
   const [data, setData] = useState({
     time: 0,
@@ -66,7 +67,7 @@ export default function Dashboard() {
       const url = "http://localhost:5000/predict";
 
       const res = await axios.post(url, data);
-      console.log(res.data[0]);
+      setPredition(res.data[0])
 
       //setPrediction(res.data.prediction);
     } catch (error) {
@@ -164,10 +165,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="time"
                     name="time"
                     onChange={handleChange}
-                    value={0}
                     required
                   />
                 </div>
@@ -177,10 +177,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V1"
                     name="v1"
                     onChange={handleChange}
-                    value={-1.35}
                     required
                   />
                 </div>
@@ -190,10 +189,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V2"
                     name="v2"
                     onChange={handleChange}
-                    value={0.266}
                     required
                   />
                 </div>
@@ -203,10 +201,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V3"
                     name="v3"
                     onChange={handleChange}
-                    value={0.166}
                     required
                   />
                 </div>
@@ -216,10 +213,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V4"
                     name="v4"
                     onChange={handleChange}
-                    value={0.0414481}
                     required
                   />
                 </div>
@@ -229,10 +225,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="v5"
                     name="v5"
                     onChange={handleChange}
-                    value={0.06}
+                  
                     required
                   />
                 </div>
@@ -242,10 +238,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="v6"
                     name="v6"
                     onChange={handleChange}
-                    value={-0.082}
+                    
                     required
                   />
                 </div>
@@ -255,10 +251,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="v7"
                     name="v7"
                     onChange={handleChange}
-                    value={-0.078}
                     required
                   />
                 </div>
@@ -268,10 +263,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V8"
                     name="v8"
                     onChange={handleChange}
-                    value={0.082}
                     required
                   />
                 </div>
@@ -281,10 +275,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V9"
                     name="v9"
                     onChange={handleChange}
-                    value={-0.085}
+                    
                     required
                   />
                 </div>
@@ -295,10 +289,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V10"
                     name="v10"
                     onChange={handleChange}
-                    value={-0.255}
+                    
                     required
                   />
                 </div>
@@ -308,10 +302,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V11"
                     name="v11"
                     onChange={handleChange}
-                    value={-0.866}
+                    
                     required
                   />
                 </div>
@@ -322,10 +316,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V12"
                     name="v12"
                     onChange={handleChange}
-                    value={1.6127}
+                    
                     required
                   />
                 </div>
@@ -335,10 +329,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V13"
                     name="v13"
                     onChange={handleChange}
-                    value={1.065}
+                    
                     required
                   />
                 </div>
@@ -348,10 +342,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V14"
                     name="v14"
                     onChange={handleChange}
-                    value={0.489}
+                    
                     required
                   />
                 </div>
@@ -361,10 +355,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V15"
                     name="v15"
                     onChange={handleChange}
-                    value={-0.143}
+                    
                     required
                   />
                 </div>
@@ -374,10 +368,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V16"
                     name="v16"
                     onChange={handleChange}
-                    value={0.6355}
+                    
                     required
                   />
                 </div>
@@ -387,10 +381,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V17"
                     name="v17"
                     onChange={handleChange}
-                    value={0.463}
+                    
                     required
                   />
                 </div>
@@ -400,10 +394,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V18"
                     name="v18"
                     onChange={handleChange}
-                    value={-0.1833}
+                    
                     required
                   />
                 </div>
@@ -413,10 +407,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V19"
                     name="v19"
                     onChange={handleChange}
-                    value={-0.145}
+                    
                     required
                   />
                 </div>
@@ -426,10 +420,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V20"
                     name="v20"
                     onChange={handleChange}
-                    value={-0.169}
+                    
                     required
                   />
                 </div>
@@ -439,10 +433,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V21"
                     name="v21"
                     onChange={handleChange}
-                    value={-0.225}
+                    
                     required
                   />
                 </div>
@@ -452,10 +446,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V22"
                     name="v22"
                     onChange={handleChange}
-                    value={-0.638}
+                    
                     required
                   />
                 </div>
@@ -465,10 +459,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V23"
                     name="v23"
                     onChange={handleChange}
-                    value={0.101}
+                    
                     required
                   />
                 </div>
@@ -478,10 +472,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V24"
                     name="v24"
                     onChange={handleChange}
-                    value={-0.3398}
+                  
                     required
                   />
                 </div>
@@ -491,10 +485,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V25"
                     name="v25"
                     onChange={handleChange}
-                    value={0.0647}
+                    
                     required
                   />
                 </div>
@@ -504,10 +498,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V26"
                     name="v26"
                     onChange={handleChange}
-                    value={-0.221}
+                  
                     required
                   />
                 </div>
@@ -517,10 +511,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V27"
                     name="v27"
                     onChange={handleChange}
-                    value={0.062}
                     required
                   />
                 </div>
@@ -530,10 +523,10 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
+                    placeholder="V28"
                     name="v28"
                     onChange={handleChange}
-                    value={0.06145}
+                  
                     required
                   />
                 </div>
@@ -543,10 +536,9 @@ export default function Dashboard() {
                     type="text"
                     id="simple-search"
                     className="bg-gray-800 border border-gray-700 text-gray-200 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter Value of versions"
-                    name="v12"
+                    placeholder="Amount"
+                    name="amount"
                     onChange={handleChange}
-                    value={123.5}
                     required
                   />
                 </div>
@@ -557,6 +549,7 @@ export default function Dashboard() {
               {error && (
                 <div className="text-red-500 text-center my-2">{error}</div>
               )}
+
 
               <button
                 onClick={handleSubmit}
@@ -581,6 +574,15 @@ export default function Dashboard() {
                 </svg>
                 <span className="sr-only">Search</span>
               </button>
+              {predition !== null && (
+        <div className="text-center my-2">
+          {predition === 0 ? (
+            <div className="text-green-500">This is a proper transaction.</div>
+          ) : (
+            <div className="text-red-500">This is a fraudulent transaction.</div>
+          )}
+        </div>
+      )}
             </form>
           </div>
         </main>
