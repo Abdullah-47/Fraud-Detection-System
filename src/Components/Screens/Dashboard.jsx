@@ -25,7 +25,7 @@ const Navbar = () => {
 export default function Dashboard() {
   const [error, setError] = useState("");
 
-  const[predition,setPredition] = useState(null);
+  const [predition, setPredition] = useState(null);
 
   const [data, setData] = useState({
     time: 0,
@@ -97,8 +97,8 @@ export default function Dashboard() {
       const url = "http://localhost:5000/predict";
 
       const res = await axios.post(url, data);
-      setPredition(res.data[0])
-      console.log(res.data[0])
+      setPredition(res.data[0]);
+      console.log(res.data[0]);
 
       //setPrediction(res.data.prediction);
     } catch (error) {
@@ -117,16 +117,18 @@ export default function Dashboard() {
       <div className="flex font-Onest">
         <div className="h-screen w-[20%] hidden bg-gray-100 lg:flex flex-col justify-between">
           <div className="flex flex-col p-4 space-y-14">
-                <a href="/">
-            <div className="w-full flex items-center justify-center space-x-3 py-4 px-2 cursor-pointer">
-              <img
-                className="h-20 object-cover bg-transparent rotate-"
-                src="/icon.png"
-                alt=""
-              />
-              <h2 className="font-semibold md:text-2xl lg:text-3xl">Fraud Detection</h2>
-            </div>
-                </a>
+            <a href="/">
+              <div className="w-full flex items-center justify-center space-x-3 py-4 px-2 cursor-pointer">
+                <img
+                  className="h-20 object-cover bg-transparent rotate-"
+                  src="/icon.png"
+                  alt=""
+                />
+                <h2 className="font-semibold md:text-2xl lg:text-3xl">
+                  Fraud Detection
+                </h2>
+              </div>
+            </a>
 
             <div className="flex flex-col space-y-10 w-full pl-10">
               <Link to="/">
@@ -136,27 +138,29 @@ export default function Dashboard() {
                 </div>
               </Link>
               <Link to="/report">
-              <div className="flex w-full justify-start items-center space-x-6">
-                <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
-                <h2 className="text-lg text-gray-700 font-semibold">
-                  Dashboard
-                </h2>
-              </div>
+                <div className="flex w-full justify-start items-center space-x-6">
+                  <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
+                  <h2 className="text-lg text-gray-700 font-semibold">
+                    Dashboard
+                  </h2>
+                </div>
               </Link>
               <Link to="/dashboard">
-              <div className="flex w-full justify-start items-center space-x-6">
-                <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
-                <h2 className="text-lg text-gray-700 font-semibold">
-                  Analytics
-                </h2>
-              </div>
+                <div className="flex w-full justify-start items-center space-x-6">
+                  <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
+                  <h2 className="text-lg text-gray-700 font-semibold">
+                    Analytics
+                  </h2>
+                </div>
               </Link>
 
               <Link to="/history">
-              <div className="flex w-full justify-start items-center space-x-6">
-                <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
-                <h2 className="text-lg text-gray-700 font-semibold">History</h2>
-              </div>
+                <div className="flex w-full justify-start items-center space-x-6">
+                  <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
+                  <h2 className="text-lg text-gray-700 font-semibold">
+                    History
+                  </h2>
+                </div>
               </Link>
             </div>
           </div>
@@ -169,13 +173,13 @@ export default function Dashboard() {
               alt=""
               srcSet=""
             />
-            <h3 className="text-xl text-gray-700 font-semibold">Ankush Rao</h3>
+            <h3 className="text-xl text-gray-700 font-semibold">Nilesh Gawli</h3>
           </div>
         </div>
 
         {/* main  */}
 
-        <main className="h-screen w-full lg:w-[80%] px-8 py-10 shadow-gray-100 shadow-md scroll-auto">
+        <main className="py-10 h-screen w-full lg:w-[80%] px-8  shadow-gray-100 shadow-md overflow-y-auto">
           <div className="h-[10%]">
             <Navbar />
           </div>
@@ -185,7 +189,7 @@ export default function Dashboard() {
               Detect Fraudulent transaction <br /> based on V1, V2
             </h1> */}
             <form
-              className="flex flex-col w-full items-center max-w-xl mx-auto"
+              className="flex flex-col w-full items-center max-w-xl mx-auto "
               onSubmit={handleSubmit}
             >
               <label htmlFor="simple-search" className="sr-only font-Onest">
@@ -264,7 +268,6 @@ export default function Dashboard() {
                     placeholder="v5"
                     name="v5"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -277,7 +280,6 @@ export default function Dashboard() {
                     placeholder="v6"
                     name="v6"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -314,7 +316,6 @@ export default function Dashboard() {
                     placeholder="V9"
                     name="v9"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -328,7 +329,6 @@ export default function Dashboard() {
                     placeholder="V10"
                     name="v10"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -341,7 +341,6 @@ export default function Dashboard() {
                     placeholder="V11"
                     name="v11"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -367,7 +366,6 @@ export default function Dashboard() {
                     placeholder="V13"
                     name="v13"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -380,7 +378,6 @@ export default function Dashboard() {
                     placeholder="V14"
                     name="v14"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -393,7 +390,6 @@ export default function Dashboard() {
                     placeholder="V15"
                     name="v15"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -406,7 +402,6 @@ export default function Dashboard() {
                     placeholder="V16"
                     name="v16"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -419,7 +414,6 @@ export default function Dashboard() {
                     placeholder="V17"
                     name="v17"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -432,7 +426,6 @@ export default function Dashboard() {
                     placeholder="V18"
                     name="v18"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -445,7 +438,6 @@ export default function Dashboard() {
                     placeholder="V19"
                     name="v19"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -458,7 +450,6 @@ export default function Dashboard() {
                     placeholder="V20"
                     name="v20"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -471,7 +462,6 @@ export default function Dashboard() {
                     placeholder="V21"
                     name="v21"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -484,7 +474,6 @@ export default function Dashboard() {
                     placeholder="V22"
                     name="v22"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -497,7 +486,6 @@ export default function Dashboard() {
                     placeholder="V23"
                     name="v23"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -510,7 +498,6 @@ export default function Dashboard() {
                     placeholder="V24"
                     name="v24"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -523,7 +510,6 @@ export default function Dashboard() {
                     placeholder="V25"
                     name="v25"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -536,7 +522,6 @@ export default function Dashboard() {
                     placeholder="V26"
                     name="v26"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -561,7 +546,6 @@ export default function Dashboard() {
                     placeholder="V28"
                     name="v28"
                     onChange={handleChange}
-
                     required
                   />
                 </div>
@@ -578,17 +562,22 @@ export default function Dashboard() {
                   />
                 </div>
               </div>
-              
+
               <div>
-        <input type="file" onChange={handleFileUpload} />
-      </div>
+
+                <h2 className="text-2xl text-center my-8 font-semibold font-Onest">Or</h2>
+                <input
+                  className=" bg-blue-800"
+                  type="file"
+                  onChange={handleFileUpload}
+                />
+              </div>
 
               {/* END */}
 
               {error && (
                 <div className="text-red-500 text-center my-2">{error}</div>
               )}
-
 
               <button
                 onClick={handleSubmit}
@@ -615,14 +604,18 @@ export default function Dashboard() {
               </button>
 
               {predition !== null && (
-        <div className="text-center my-2">
-          {predition === 0 ? (
-            <div className="text-green-500">This is a proper transaction.</div>
-          ) : (
-            <div className="text-red-500">This is a fraudulent transaction.</div>
-          )}
-        </div>
-      )}
+                <div className="text-center my-2 font-Onest">
+                  {predition === 0 ? (
+                    <div className="text-green-500 ">
+                      This is a proper transaction.
+                    </div>
+                  ) : (
+                    <div className="text-red-500 ">
+                      This is a fraudulent transaction.
+                    </div>
+                  )}
+                </div>
+              )}
             </form>
           </div>
         </main>
