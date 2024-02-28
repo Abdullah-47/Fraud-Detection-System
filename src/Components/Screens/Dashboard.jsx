@@ -23,9 +23,7 @@ const Navbar = () => {
 
 export default function Dashboard() {
   const [error, setError] = useState("");
-  const handleChange = ({ currentTarget: input }) => {
-    setData({ ...data, [input.name]: input.value });
-  };
+
   const[predition,setPredition] = useState(null);
 
   const [data, setData] = useState({
@@ -61,6 +59,12 @@ export default function Dashboard() {
     amount: 0.0,
   });
 
+  const handleChange = ({ currentTarget: input }) => {
+    const value = parseFloat(input.value);
+  
+    setData({ ...data, [input.name]: value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -68,6 +72,7 @@ export default function Dashboard() {
 
       const res = await axios.post(url, data);
       setPredition(res.data[0])
+      console.log(res.data[0])
 
       //setPrediction(res.data.prediction);
     } catch (error) {
@@ -84,9 +89,7 @@ export default function Dashboard() {
   return (
     <>
       <div className="flex font-Onest">
-        {/* Sidebar */}
         <div className="h-screen w-[20%] hidden bg-gray-100 lg:flex flex-col justify-between">
-          {/* top */}
           <div className="flex flex-col p-4 space-y-14">
                 <a href="/">
             <div className="w-full flex items-center justify-center space-x-3 py-4 px-2 cursor-pointer">
@@ -326,7 +329,6 @@ export default function Dashboard() {
                     placeholder="V12"
                     name="v12"
                     onChange={handleChange}
-                    
                     required
                   />
                 </div>
