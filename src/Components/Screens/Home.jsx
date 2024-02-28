@@ -24,7 +24,7 @@ export default function Home() {
           <Navbar />
         </div>
         <div className="h-full w-full flex justify-center items-end bg-home bg-no-repeat bg-cover bg-end shadow-md m:bg-center bg-fixed">
-          <img className="p-12 opacity-35 cursor-pointer hover:translate-y-4 active:translate-y-8 " src="/arrow.png" alt=""
+          <img className="h-24 mb-9 cursor-pointer rotate-90 hover:translate-y-4 active:translate-y-8 " src="/arrow.png" alt=""
             onClick={scrollBottom}
           />
         </div>

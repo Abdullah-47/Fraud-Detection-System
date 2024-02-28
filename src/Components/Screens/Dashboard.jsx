@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex justify-between items-center font-Onest">
-        <h1 className="text-3xl font-bold">Dashboard</h1>
+        <h1 className="text-3xl font-bold">Analytics</h1>
 
         <div className="flex justify-between items-center space-x-4 text-md text-gray-600">
           {/* <a className="hover:text-black hover:text-lg" href="/login">
@@ -135,7 +135,7 @@ export default function Dashboard() {
                   <h2 className="text-lg text-gray-700 font-semibold">Home</h2>
                 </div>
               </Link>
-              <Link to="/dashboard">
+              <Link to="/report">
               <div className="flex w-full justify-start items-center space-x-6">
                 <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
                 <h2 className="text-lg text-gray-700 font-semibold">
@@ -152,7 +152,7 @@ export default function Dashboard() {
               </div>
               </Link>
 
-              <Link to="/dashboard">
+              <Link to="/history">
               <div className="flex w-full justify-start items-center space-x-6">
                 <img className="h-5 opacity-60" src="/dashboard.png" alt="" />
                 <h2 className="text-lg text-gray-700 font-semibold">History</h2>
