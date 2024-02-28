@@ -44,8 +44,9 @@ async def predict(data:Frauddata):
     v28=data['v28']
     amount=data['amount']
 
-    prediction = model.predict([[time,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,v27,v28,amount]])
- 
+    # prediction = model.predict([[time,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,v27,v28,amount]])
+    prediction = model.predict([[0,-1.35,0.266,0.166,0.0414481,0.06,-0.082,-0.078,0.085,-0.255,-0.866,1.6127,1.065,0.489,-0.143,0.6355,0.463,-0.114,-0.1833,-0.145,-0.169,-0.225,-0.638,0.101,-0.3398,0.0647,-0.221,0.062,0.06145,123.5]])
+
     return {int(prediction[0])}
 
 @app.get('/')

@@ -87,14 +87,16 @@ export default function Dashboard() {
         <div className="h-screen w-[20%] hidden bg-gray-100 lg:flex flex-col justify-between">
           {/* top */}
           <div className="flex flex-col p-4 space-y-14">
-            <div className="w-full flex items-center justify-center space-x-3 py-4 px-2">
+                <a href="/">
+            <div className="w-full flex items-center justify-center space-x-3 py-4 px-2 cursor-pointer">
               <img
                 className="h-20 object-cover bg-transparent rotate-"
                 src="/icon.png"
                 alt=""
               />
-              <h2 className="font-semibold text-3xl">Fraud Detection</h2>
+              <h2 className="font-semibold md:text-2xl lg:text-3xl">Fraud Detection</h2>
             </div>
+                </a>
 
             <div className="flex flex-col space-y-10 w-full pl-10">
               <Link to="/">
@@ -149,7 +151,7 @@ export default function Dashboard() {
               className="flex flex-col w-full items-center max-w-xl mx-auto"
               onSubmit={handleSubmit}
             >
-              <label htmlFor="simple-search" className="sr-only">
+              <label htmlFor="simple-search" className="sr-only font-Onest">
                 Search
               </label>
 
@@ -165,7 +167,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="time"
                     onChange={handleChange}
-                    value={data.time}
+                    value={0}
                     required
                   />
                 </div>
@@ -178,7 +180,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v1"
                     onChange={handleChange}
-                    value={data.v1}
+                    value={-1.35}
                     required
                   />
                 </div>
@@ -191,7 +193,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v2"
                     onChange={handleChange}
-                    value={data.v2}
+                    value={0.266}
                     required
                   />
                 </div>
@@ -204,7 +206,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v3"
                     onChange={handleChange}
-                    value={data.v3}
+                    value={0.166}
                     required
                   />
                 </div>
@@ -217,7 +219,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v4"
                     onChange={handleChange}
-                    value={data.v4}
+                    value={0.0414481}
                     required
                   />
                 </div>
@@ -230,7 +232,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v5"
                     onChange={handleChange}
-                    value={data.v5}
+                    value={0.06}
                     required
                   />
                 </div>
@@ -243,7 +245,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v6"
                     onChange={handleChange}
-                    value={data.v6}
+                    value={-0.082}
                     required
                   />
                 </div>
@@ -256,7 +258,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v7"
                     onChange={handleChange}
-                    value={data.v7}
+                    value={-0.078}
                     required
                   />
                 </div>
@@ -269,7 +271,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v8"
                     onChange={handleChange}
-                    value={data.v8}
+                    value={0.082}
                     required
                   />
                 </div>
@@ -282,7 +284,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v9"
                     onChange={handleChange}
-                    value={data.v9}
+                    value={-0.085}
                     required
                   />
                 </div>
@@ -296,7 +298,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v10"
                     onChange={handleChange}
-                    value={data.v10}
+                    value={-0.255}
                     required
                   />
                 </div>
@@ -309,7 +311,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v11"
                     onChange={handleChange}
-                    value={data.v11}
+                    value={-0.866}
                     required
                   />
                 </div>
@@ -323,7 +325,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v12"
                     onChange={handleChange}
-                    value={data.v12}
+                    value={1.6127}
                     required
                   />
                 </div>
@@ -336,7 +338,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v13"
                     onChange={handleChange}
-                    value={data.v13}
+                    value={1.065}
                     required
                   />
                 </div>
@@ -349,7 +351,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v14"
                     onChange={handleChange}
-                    value={data.v14}
+                    value={0.489}
                     required
                   />
                 </div>
@@ -362,7 +364,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v15"
                     onChange={handleChange}
-                    value={data.v15}
+                    value={-0.143}
                     required
                   />
                 </div>
@@ -375,7 +377,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v16"
                     onChange={handleChange}
-                    value={data.v16}
+                    value={0.6355}
                     required
                   />
                 </div>
@@ -388,7 +390,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v17"
                     onChange={handleChange}
-                    value={data.v17}
+                    value={0.463}
                     required
                   />
                 </div>
@@ -401,7 +403,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v18"
                     onChange={handleChange}
-                    value={data.v18}
+                    value={-0.1833}
                     required
                   />
                 </div>
@@ -414,7 +416,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v19"
                     onChange={handleChange}
-                    value={data.v19}
+                    value={-0.145}
                     required
                   />
                 </div>
@@ -427,7 +429,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v20"
                     onChange={handleChange}
-                    value={data.v20}
+                    value={-0.169}
                     required
                   />
                 </div>
@@ -440,7 +442,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v21"
                     onChange={handleChange}
-                    value={data.v21}
+                    value={-0.225}
                     required
                   />
                 </div>
@@ -453,7 +455,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v22"
                     onChange={handleChange}
-                    value={data.v22}
+                    value={-0.638}
                     required
                   />
                 </div>
@@ -466,7 +468,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v23"
                     onChange={handleChange}
-                    value={data.v23}
+                    value={0.101}
                     required
                   />
                 </div>
@@ -479,7 +481,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v24"
                     onChange={handleChange}
-                    value={data.v24}
+                    value={-0.3398}
                     required
                   />
                 </div>
@@ -492,7 +494,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v25"
                     onChange={handleChange}
-                    value={data.v25}
+                    value={0.0647}
                     required
                   />
                 </div>
@@ -505,7 +507,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v26"
                     onChange={handleChange}
-                    value={data.v26}
+                    value={-0.221}
                     required
                   />
                 </div>
@@ -518,7 +520,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v27"
                     onChange={handleChange}
-                    value={data.v27}
+                    value={0.062}
                     required
                   />
                 </div>
@@ -531,7 +533,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v28"
                     onChange={handleChange}
-                    value={data.v28}
+                    value={0.06145}
                     required
                   />
                 </div>
@@ -544,7 +546,7 @@ export default function Dashboard() {
                     placeholder="Enter Value of versions"
                     name="v12"
                     onChange={handleChange}
-                    value={data.amount}
+                    value={123.5}
                     required
                   />
                 </div>
