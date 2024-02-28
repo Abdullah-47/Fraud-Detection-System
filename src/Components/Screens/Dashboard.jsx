@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import * as XLSX from "xlsx";
 
 const Navbar = () => {
   return (
@@ -65,6 +66,31 @@ export default function Dashboard() {
     setData({ ...data, [input.name]: value });
   };
 
+  // Function to handle file upload
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (evt) => {
+      const bstr = evt.target.result;
+      const wb = XLSX.read(bstr, { type: "binary" });
+      const wsname = wb.SheetNames[0];
+      const ws = wb.Sheets[wsname];
+      const data = XLSX.utils.sheet_to_json(ws, { header: 1 });
+      
+      // Assuming the Excel file has headers and the data starts from the second row
+      const [headers, ...rowData] = data;
+      const newData = {};
+      headers.forEach((header, index) => {
+        newData[header.toLowerCase()] = rowData[0][index];
+      });
+      
+      setData(newData);
+    };
+
+    reader.readAsBinaryString(file);
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -583,6 +609,9 @@ export default function Dashboard() {
                 </svg>
                 <span className="sr-only">Search</span>
               </button>
+              <div>
+        <input type="file" onChange={handleFileUpload} />
+      </div>
               {predition !== null && (
         <div className="text-center my-2">
           {predition === 0 ? (
